@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1>Tarefas</h1>
+    <a href="/task/new" class="btn">Cadastrar Nova Tarefa</a>
+    <div class="content">
+        <div class="tasks">
+            <div class="card-task"  th:each="task : ${tasks}">
+                    <h2 th:text="${task.title}"></h2>
+                    <p th:text="${task.description}"></p>
+                    <p th:text="${task.score}"></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
